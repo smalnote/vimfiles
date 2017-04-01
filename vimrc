@@ -1,3 +1,4 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 if !has('gui_running')
     let g:pathogen_disabled = [ "ultisnips", "vim-powerline" ]
 else

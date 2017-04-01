@@ -31,3 +31,6 @@
 [submodule "bundle/cmd-colors-solarized"]
 	path = bundle/cmd-colors-solarized
 	url = https://github.com/neilpa/cmd-colors-solarized.git
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
