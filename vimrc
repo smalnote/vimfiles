@@ -2,7 +2,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 if !has('gui_running')
     let g:pathogen_disabled = [ "ultisnips", "vim-powerline" ]
 else
-    let g:pathogen_disabled = [ "ultisnips", "vim-snippets"]
+    let g:pathogen_disabled = [ "vim-snippets"]
 endif
 execute pathogen#infect()
 
@@ -20,6 +20,9 @@ else
     set background=dark
     colorscheme slate
 endif
+
+"add python3.5 32bit
+let $PATH.=';C:\devkit\python3532'
 
 filetype plugin indent on
 syntax on
@@ -117,21 +120,26 @@ nmap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
 nmap <leader>tl :Tlist<CR>
 nmap <leader>fl :NERDTreeToggle<CR>
 
-function! CdWS()
+function! CDWS()
     if !empty($WS)
         :NERDTree $WS
         :cd $WS
     endif
 endfunction
 
+if !empty($WS)
+    :cd $WS
+endif
+
 function! SetTag()
     if filereadable("tags")
         :set tags=tags<CR>
     endif
 endfunction
+
 nmap <leader>st :call SetTag()<CR>
 nmap <leader>gt :silent !ctags -R<CR>
-nmap <leader>ws :call CdWS()<CR>
+nmap <leader>ws :call CDWS()<CR>
 
 " plugin UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
