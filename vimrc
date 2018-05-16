@@ -7,9 +7,9 @@ endif
 execute pathogen#infect()
 
 if has('gui_running')
-    set background=dark
+    set background=light
     colorscheme solarized
-    set guifont=YaHei_Consolas_Hybrid:h12
+    set guifont=YaHei_Consolas_Hybrid:h10
     " highlight current line
     set cursorline
     " highlight current column
@@ -24,7 +24,7 @@ endif
 filetype plugin indent on
 syntax on
 
-set lines=50 columns=164
+set lines=40 columns=132
 
 " show status bar
 set laststatus=2
@@ -67,7 +67,7 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 " hide menu 
-set guioptions-=m
+" set guioptions-=m
 " hide toolbar
 set guioptions-=T
 
@@ -120,6 +120,7 @@ nmap <leader>fl :NERDTreeToggle<CR>
 function! CdWS()
     if !empty($WS)
         :NERDTree $WS
+        :cd $WS
     endif
 endfunction
 
