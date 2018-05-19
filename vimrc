@@ -127,10 +127,6 @@ function! CDWS()
     endif
 endfunction
 
-if !empty($WS)
-    :cd $WS
-endif
-
 function! SetTag()
     if filereadable("tags")
         :set tags=tags<CR>
