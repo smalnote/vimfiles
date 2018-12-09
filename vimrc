@@ -1,6 +1,6 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 if !has('gui_running')
-    let g:pathogen_disabled = [ "ultisnips", "vim-powerline" ]
+    let g:pathogen_disabled = [ "vim-powerline" ]
 else
     let g:pathogen_disabled = [ "vim-snippets"]
 endif
