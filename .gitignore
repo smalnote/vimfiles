@@ -1,1 +1,10 @@
 *.swp
+
+backup/*
+undo/*
+swap/*
+info/viminfo/*
+!backup/stub
+!undo/stub
+!swap/stub
+!info/viminfo/stub

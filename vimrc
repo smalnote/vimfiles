@@ -150,3 +150,15 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 set fileencodings=utf-8,gb2312,gb18030,gbk
 set encoding=utf-8
 set termencoding=utf-8
+
+
+" Put all temporary files under the same directory.
+" https://github.com/mhinz/vim-galore#handling-backup-swap-undo-and-viminfo-filesset backup
+set backupdir   =$HOME/vimfiles/backup/
+set backupext   =-vimbackup
+set backupskip  =
+set directory   =$HOME/vimfiles/swap/
+set updatecount =100
+set undofile
+set undodir     =$HOME/vimfiles/undo/
+set viminfo     ='100,n$HOME/.vim/files/info/viminfo
