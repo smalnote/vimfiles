@@ -9,7 +9,7 @@ execute pathogen#infect()
 if has('gui_running')
     set background=light
     colorscheme solarized
-    set guifont=YaHei_Consolas_Hybrid:h10
+    set guifont=YaHei\ Consolas\ Hybrid:h14
     " highlight current line
     set cursorline
     " highlight current column
@@ -41,6 +41,10 @@ set hlsearch
 
 " disabled split long line
 set nowrap
+
+" word wrap
+set formatoptions=l
+set lbr
 
 " terminal 256 color
 " set t_Co=256
